@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'Affectionately';
+    src: local('Affectionately') , url('./Fonts/Affectionately\ Yours\ -\ TTF.ttf');
+}
+
+@font-face {
+    font-family: 'LoveDays';
+    src: local('LoveDays') , url('./Fonts/LoveDays-2v7Oe.ttf');
+}
+
+.text-font {
+    font-family: Affectionately, 'Courier New', Courier, monospace;
+    @apply font-bold text-xl;
+    color: #3a1515;
+}
+
+.text-author {
+    font-family: LoveDays, 'Courier New', Courier, monospace;
+    @apply font-bold text-lg;
+    color: #3a1515;
+
+}
+
+
+.heart {
+    height: 200px;
+    width: 200px;
+    background-color: #cc2b5e ;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -20px 20px 50px #f20044;
+    animation: heart 2s linear infinite;
+}
+
+
+@keyframes heart {
+    0% {
+        transform: rotate(-45deg) scale(1);
+        box-shadow: -20px 20px 50px #f20044;
+    }
+
+    25% {
+        transform: rotate(-50deg) scale(1.1);
+        box-shadow: -25px 25px 50px #ff6b6b;
+    }
+
+    50% {
+        transform: rotate(-45deg) scale(1);
+        box-shadow: -20px 20px 50px #f20044;
+    }
+
+    75% {
+        transform: rotate(-40deg) scale(1.1);
+        box-shadow: -25px 25px 50px #ff6b6b;
+    }
+
+    100% {
+        transform: rotate(-45deg) scale(1);
+        box-shadow: -20px 20px 50px #f20044;
+    }
+}
+
+
+.heart:before {
+    content: '';
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background-color: #cc2b5e;
+    top: -50%;
+    border-radius: 50%;
+    box-shadow: 15px -20px 50px #f20044;
+}
+
+.heart:after {
+    content: '';
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background-color: #cc2b5e;
+    right: -50%;
+    border-radius: 50%;
+    box-shadow: 50px 50px 50px #f20044;
+}

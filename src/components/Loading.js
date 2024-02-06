@@ -18,7 +18,7 @@ const Loading = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setDots((prevDots) => (prevDots % 3) + 1);
-        }, 300);
+        }, 400);
 
         return () => clearInterval(interval);
     }, []);
