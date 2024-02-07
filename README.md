@@ -1,7 +1,8 @@
 ![Logo](https://github.com/scienmanas/Valentine-Proposal-Website/assets/99756067/1b2b124f-6011-49af-9242-f3cf70e49d74)
 
+# ValenTiner
 
-A Website to propose to your crush on valentine's day
+A Website to propose to your crush on valentine's day . It is a simple and beautiful website to propose to your crush on valentine's day. It is responsive and customizable. You can easily edit the `index.html` file to add your own images and text. You can host the website on [GitHub Pages](https://pages.github.com/) or on [Vercel](https://vercel.com/).
 
 ## Features
 - [x] Responsive
@@ -11,7 +12,7 @@ A Website to propose to your crush on valentine's day
 
 ## How to use
 - Fork this repository
-- Edit the `index.html` file
+- Edit the `front-page.js` file in components.
 - Replace the images with your own
 - Replace the text with your own
 - Host the website on [GitHub Pages](https://pages.github.com/) or on [Vercel](https://vercel.com/)
