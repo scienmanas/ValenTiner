@@ -7,7 +7,7 @@ import './styles/frontpage.css';
 export default function FrontPage() {
     const [text, setText] = useState('');
     const [loading, setLoading] = useState(true);
-    const sentence = "I have something important to tell you ...";
+    const sentence = "We have known each other from a long time but today I have something important to tell you...\n";
     const typingSpeed = 200; // Adjust typing speed here
 
     useEffect(() => {
@@ -70,12 +70,10 @@ export default function FrontPage() {
                 </div>
             </div>
             <div className="content-ask text-white z-10 flex flex-col flex-wrap gap-6 justify-center items-center">
-                <div className="text">
-                    <p className='sm:text-2xl text-lg'>{text}</p>
+                <div className="text px-8">
+                    <p className='sm:text-5xl text-3xl typing-text text-transparent bg-clip-text bg-gradient-to-br from-[#ff9966] to-[#36d1dc] shadow-pink-800 select-none'>{text}</p>
                 </div>
-                <button className="button glow-on-hover bg-transparent bg-gradient-to-t from-pink-600 to-orange-600 p-3 rounded-md shadow-lg shadow-red-200 w-fit h-fit">
-                    See the Message !
-                </button>
+                <div class="button shadow-[5px_5px_0px_0px_rgba(109,40,217)] active:translate-x-1 active:translate-y-1 active:shadow-none duration-150 mt-4 lg:text-xl box-shado w-fit h-fit bg-gradient-to-r from-[#FFECD2] to-[#FCB69F] py-3 px-4 rounded-md"><button class="w-fit h-fit text-transparent bg-clip-text bg-gradient-to-r from-[#C33764] to-[#1D2671] font-bold">See Mesaage</button></div>
             </div>
         </div>
     );
