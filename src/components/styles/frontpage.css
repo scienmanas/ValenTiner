@@ -16,14 +16,17 @@
 .text-font {
     font-family: Affectionately, 'Courier New', Courier, monospace;
     @apply font-bold text-xl;
-    color: #3a1515;
+    letter-spacing: 0.015rem;
 }
 
 .text-author {
     font-family: LoveDays, 'Courier New', Courier, monospace;
     @apply font-bold text-lg;
     color: #3a1515;
+}
 
+.custom-color-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-br from-[#56ab2f] to-[#a8e063];
 }
 
 
@@ -85,5 +88,5 @@
     background-color: #cc2b5e;
     right: -50%;
     border-radius: 50%;
-    box-shadow: 50px 50px 50px #f20044;
+    box-shadow: 30px -10px 50px #f20044;
 }
