@@ -18,6 +18,17 @@
     src: local('CarryYou') , url('./Fonts/CarryYouRegular-3z71M.ttf');
 }
 
+@font-face {
+    font-family: 'Dagger';
+    src: local('Dagger') , url('./Fonts/DAGGERSQUARE.otf');
+}
+
+.button-text{
+    font-family: Dagger, 'Courier New', Courier, monospace;
+    @apply font-bold;
+    letter-spacing: 0.015rem;
+}
+
 .typing-text {
     font-family: CarryYou, 'Courier New', Courier, monospace;
     @apply font-bold;

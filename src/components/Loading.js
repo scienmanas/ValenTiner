@@ -30,6 +30,7 @@ const Loading = () => {
                     options={defaultOptions}
                     height={230}
                     width={230}
+                    isClickToPauseDisabled={true}
                 />
             </div>
             <div className="loading-text select-none">
