@@ -2,7 +2,7 @@
 
 # ValenTiner
 
-A Website to propose to your crush on valentine's day . It is a simple and beautiful website to propose to your crush on valentine's day. It is responsive and customizable. You can easily edit the `index.html` file to add your own images and text. You can host the website on [GitHub Pages](https://pages.github.com/) or on [Vercel](https://vercel.com/).
+A Website to propose to your crush on valentine's day . It is a simple and beautiful website to propose to your crush on valentine's day. It is responsive and customizable. You can host the website on [GitHub Pages](https://pages.github.com/) or on [Vercel](https://vercel.com/).
 
 ## Features
 - [x] Responsive

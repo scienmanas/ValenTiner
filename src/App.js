@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Loading from './components/Loading';
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import FrontPage from './components/FrontPage';
+import Card from './components/Card';
 
 function App() {
 
@@ -21,10 +22,11 @@ function App() {
 
   return (
     <>
-      {loading === true ? <Loading /> :
+      {/* {loading === true ? <Loading /> :
         <div id='valentizer' className={`valentizer`}>
           <FrontPage />
-        </div>}
+        </div>} */}
+    < Card />
     </>
   );
 }
