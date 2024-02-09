@@ -2,7 +2,6 @@ import logo from './logo.svg';
 import './App.css';
 import { useState, useEffect } from 'react';
 import Loading from './components/Loading';
-import { CSSTransition, TransitionGroup } from "react-transition-group";
 import FrontPage from './components/FrontPage';
 import Card from './components/Card';
 

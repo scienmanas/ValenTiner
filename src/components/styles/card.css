@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'LoveDay';
+    src: local('LoveDay') , url('./Fonts/LoveDays-2v7Oe.ttf');
+}
+
+.card {
+    animation: translate-up 4s ease-in-out infinite;
+    font-family: 'Brush Script MT', cursive;
+}
+
+@keyframes translate-up {
+    0% {
+        transform: translateY(0px)
+    }
+
+    100% {
+        transform: translateY(-100px)
+    }
+
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    bottom: 0px;
+    width: 90%;
+    height: 90%;
+    @apply border-[3px] border-[#a504f6] border-dotted;
+}
+
+.back-envelope::before {
+    content: '';
+    position: absolute;
+    width: 237px;
+    height: 237px;
+    background-color: #8202d2;
+    rotate: calc(45deg);
+    top: -117px;
+    left: 46px;
+    border-radius: 30px 9px 0px 9px;
+}
+
+.back-envelope {
+    animation: en-translate 4s infinite ease-in-out;
+}
+
+@keyframes en-translate {
+    0% {
+        transform: translateY(0px)
+    }
+
+    50% {
+        transform: translateY(-10px)
+    }
+
+    100% {
+        transform: translateY(0px)
+    }
+}
+
+.front-envelope {
+    position: relative;
+    border-right: 180px solid #8202d2;
+    border-top: 95px solid transparent;
+    border-bottom: 102px solid transparent;
+    left: 72px;
+    top: 21px;
+    width: 0;
+    height: 0;
+    z-index: 3;
+    @apply rounded-lg;
+    animation: en-translate 4s infinite ease-in-out;
+}
+
+.front-envelope:before {
+    z-index: 2;
+    @apply rounded-lg;
+    position: absolute;
+    content: "";
+    border-left: 330px solid #ac32f8;
+    border-top: 205px solid transparent;
+    left: -148px;
+    top: -102px;
+    width: 0;
+    height: 0;
+}
+
+
+.shadow {
+    animation: shadow-translate 4s infinite ease-in-out;
+}
+
+@keyframes shadow-translate {
+    0% {
+        transform: translateY(186px);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translateY(176px);
+        scale: (1.05);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(186px);
+        opacity: 0.5;
+    }
+}
+
+.text-button {
+    font-family: 'LoveDay',cursive,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
