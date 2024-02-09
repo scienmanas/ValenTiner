@@ -25,7 +25,7 @@ const Loading = () => {
 
     return (
         <div className="loading min-h-screen flex justify-center items-center flex-col bg-gradient-to-br from-[#cc2b5e] to-[#753a88]">
-            <div className='lottie relative'>
+            <div className='lottie relative pointer-events-none'>
                 <Lottie
                     options={defaultOptions}
                     height={230}

@@ -4,6 +4,9 @@ import { useState, useEffect } from 'react';
 import Loading from './components/Loading';
 import FrontPage from './components/FrontPage';
 import Card from './components/Card';
+import Note from './components/Note';
+import MessageSend from './components/MessageSend';
+import Ask from './components/Ask';
 
 function App() {
 
@@ -25,7 +28,8 @@ function App() {
         <div id='valentizer' className={`valentizer`}>
           <FrontPage />
         </div>} */}
-    < Card />
+    {/* < Card /> */}
+    <Note />
     </>
   );
 }

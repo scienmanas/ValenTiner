@@ -60,11 +60,11 @@
     position: relative;
     transform: rotate(-45deg);
     box-shadow: -20px 20px 50px #f20044;
-    animation: heart 2s linear infinite;
+    animation: heart-animation 2s linear infinite;
 }
 
 
-@keyframes heart {
+@keyframes heart-animation {
     0% {
         transform: rotate(-45deg) scale(1);
         box-shadow: -20px 20px 50px #f20044;

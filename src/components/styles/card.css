@@ -5,24 +5,31 @@
 
 @font-face {
     font-family: 'LoveDay';
-    src: local('LoveDay') , url('./Fonts/LoveDays-2v7Oe.ttf');
+    src: local('LoveDay'), url('./Fonts/LoveDays-2v7Oe.ttf');
 }
 
 .card {
-    animation: translate-up 4s ease-in-out infinite;
     font-family: 'Brush Script MT', cursive;
+    transform-style: preserve-3d;
 }
 
-@keyframes translate-up {
+/* .card-translate-before {
+    animation: card-translate_ 4s ease-in-out infinite;
+}
+
+@keyframes card-translate_ {
     0% {
-        transform: translateY(0px)
+        transform: translateY(-128px)
     }
 
+    50% {
+        transform: translateY(-138pxpx)
+    }
     100% {
-        transform: translateY(-100px)
+        transform: translateY(-128px)
     }
 
-}
+} */
 
 .card::before {
     content: '';
@@ -42,6 +49,7 @@
     height: 237px;
     background-color: #8202d2;
     rotate: calc(45deg);
+    ;
     top: -117px;
     left: 46px;
     border-radius: 30px 9px 0px 9px;
@@ -67,7 +75,7 @@
 
 .front-envelope {
     position: relative;
-    border-right: 180px solid #8202d2;
+    border-right: 180px solid #8804db;
     border-top: 95px solid transparent;
     border-bottom: 102px solid transparent;
     left: 72px;
@@ -116,5 +124,98 @@
 }
 
 .text-button {
-    font-family: 'LoveDay',cursive,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'LoveDay', cursive, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.hearts {
+    position: absolute
+}
+
+.one,
+.two,
+.three,
+.four,
+.five {
+    background-color: red;
+    display: inline-block;
+    height: 10px;
+    margin: 0 10px;
+    position: relative;
+    transform: rotate(-45deg);
+    width: 10px;
+    top: 50px;
+}
+
+.one:before,
+.one:after,
+.two:before,
+.two:after,
+.three:before,
+.three:after,
+.four:before,
+.four:after,
+.five:before,
+.five:after {
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    height: 10px;
+    position: absolute;
+    width: 10px;
+}
+
+.one:before,
+.two:before,
+.three:before,
+.four:before,
+.five:before {
+    top: -5px;
+    left: 0;
+}
+
+.one:after,
+.two:after,
+.three:after,
+.four:after,
+.five:after {
+    left: 5px;
+    top: 0;
+}
+
+.one {
+    left: 10px;
+    animation: heart 1s ease-out infinite;
+}
+
+.two {
+    left: 30px;
+    animation: heart 2s ease-out infinite;
+}
+
+.three {
+    left: 50px;
+    animation: heart 1.5s ease-out infinite;
+}
+
+.four {
+    left: 70px;
+    animation: heart 2.3s ease-out infinite;
+}
+
+.five {
+    left: 90px;
+    animation: heart 1.7s ease-out infinite;
+}
+
+@keyframes heart {
+    0% {
+        transform: translateY(0) rotate(-45deg) scale(0.3);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-150px) rotate(-45deg) scale(1.3);
+        opacity: 0.5;
+    }
 }

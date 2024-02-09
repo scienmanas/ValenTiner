@@ -43,7 +43,7 @@ export default function FrontPage() {
     return (
         <div id='front-page' className='min-h-screen opacity-80 overflow-hidden w-full flex items-center justify-center flex-col gap-16 transition-opacity duration-200 ease-in-out bg-transparent bg-gradient-to-r from-[#c33764] to-[#1d2671]' >
             <img src={bg} alt="" className='absolute min-h-screen object-cover pointer-events-none overflow-hidden' />
-            <div className="absolute">
+            <div className="absolute pointer-events-none">
                 <Lottie
                     options={floatingHeartAnimation}
                     height={230}
@@ -74,7 +74,7 @@ export default function FrontPage() {
                 <div className="text px-8">
                     <p className='sm:text-5xl text-3xl typing-text text-transparent bg-clip-text bg-gradient-to-br from-[#ff9966] to-[#36d1dc] shadow-pink-800 select-none'>{text}</p>
                 </div>
-                <div id='message-button' class="hidden transition-all duration-200 button button-text shadow-[5px_5px_0px_0px_rgba(109,40,217)] active:translate-x-1 active:translate-y-1 active:shadow-none mt-4 lg:text-xl box-shado w-fit h-fit bg-gradient-to-r from-[#FFECD2] to-[#FCB69F] py-4 px-5 rounded-md"><button class="w-fit h-fit text-transparent bg-clip-text bg-gradient-to-r from-[#C33764] to-[#1D2671] font-bold"><span className='select-none'>See Message</span></button></div>
+                <button id='message-button' class="hidden transition-all duration-200 button button-text shadow-[5px_5px_0px_0px_rgba(109,40,217)] active:translate-x-1 active:translate-y-1 active:shadow-none mt-4 lg:text-xl box-shado w-fit h-fit bg-gradient-to-r from-[#FFECD2] to-[#FCB69F] py-4 px-5 rounded-md"><div class="w-fit h-fit text-transparent bg-clip-text bg-gradient-to-r from-[#C33764] to-[#1D2671] font-bold"><span className='select-none'>See Message</span></div></button>
             </div>
         </div>
     );

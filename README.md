@@ -12,7 +12,7 @@ A Website to propose to your crush on valentine's day . It is a simple and beaut
 
 ## How to use
 - Fork this repository
-- Edit the `front-page.js` file in components.
+- Edit the message contents.
 - Replace the images with your own
 - Replace the text with your own
 - Host the website on [GitHub Pages](https://pages.github.com/) or on [Vercel](https://vercel.com/)
