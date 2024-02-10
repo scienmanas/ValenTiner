@@ -55,22 +55,19 @@ export default function Card() {
   }
 
   return (
-    <div
-      className="card-and-animation flex min-h-screen flex-col bg-transparent bg-gradient-to-tr from-[#3a1c71] via-[#d76d77] to-[#ffaf7b] ">
-      <div
-        className="contain h-[430px] mt-[75px] sm:mt-24 w-full flex items-center justify-center">
-        <div
-          className="back-envelope absolute z-1 bg-[#8202d2] w-[330px] h-60 shadow-xl rounded-lg"></div>
-        <div
-          className="card transition-transform blur-xl z-2 w-80 h-52 bg-[#ecb9e5] shadow-xl rounded-xl absolute flex flex-col flex-wrap items-center">
+    <div className="card-and-animation flex min-h-screen flex-col bg-transparent bg-gradient-to-tr from-[#3a1c71] via-[#d76d77] to-[#ffaf7b] ">
+      <div className="contain place-content-center h-[430px] mt-[75px] sm:mt-24 w-full flex items-center justify-center">
+        <div className="back-envelope absolute z-1 bg-[#8202d2] w-[330px] h-60 shadow-xl rounded-lg"></div>
+        <div className="fron-envelope-area absolute">
+          <div className="front-envelope absolute z-3"> </div>
+        </div>
+        <div className="card transition-transform blur-xl z-2 w-80 h-52 bg-[#ecb9e5] shadow-xl rounded-xl absolute flex flex-col flex-wrap items-center">
           <div
             className="text-1 relative mt-4 mx-11 text-3xl text-right select-none">
             Happy Valentine's Day!
           </div>
-          <div
-            className="relative text-right text-xl font-bold mt-1 mx-14 text-transparent bg-clip-text bg-gradient-to-br from-[#42275a] to-[#753a88] select-none">I have written something for you
+          <div className="relative text-right text-xl font-bold mt-1 mx-14 text-transparent bg-clip-text bg-gradient-to-br from-[#42275a] to-[#753a88] select-none">I have written something for you
           </div>
-
           <div
             className="button-2 w-fit h-fit hidden">
             <button
@@ -86,17 +83,14 @@ export default function Card() {
             </button>
           </div>
         </div>
-        <div
-          className="front-envelope absolute z-3">
-        </div>
-        <div
+        {/* <div
           className="hearts">
           <div className="one"></div>
           <div className="two"></div>
           <div className="three"></div>
           <div className="four"></div>
           <div className="five"></div>
-        </div>
+        </div> */}
         <div
           className="z-3 shadow absolute w-[330px] h-14 bg-slate-400 translate-y-44 rounded-[50%]"></div>
       </div>
@@ -121,7 +115,7 @@ export default function Card() {
           >
             <div
               className="z-0 text-button text-center text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-[#eecda3] to-[#a8e063] select-none">
-              {buttonText} 
+              {buttonText}
               <span className='text-red-700'> &#x1F498;</span>
             </div>
           </div>

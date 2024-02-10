@@ -6,6 +6,11 @@ import FrontPage from './components/FrontPage';
 import Card from './components/Card';
 import Note from './components/Note';
 import Ask from './components/Ask';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 function App() {
 
@@ -23,13 +28,21 @@ function App() {
 
   return (
     <>
-      {/* {loading === true ? <Loading /> :
-        <div id='valentizer' className={`valentizer`}>
-          <FrontPage />
-        </div>} */}
-    {/* < Card /> */}
-    {/* <Note /> */}
-    <Ask />
+      <Router>
+        <Routes>
+          <Route path='/' element={loading === true ? <Loading /> :
+            <div id='valentizer' className={`valentizer`}>
+              <FrontPage />
+            </div>} >
+          </Route>
+          <Route path='/card' element={< Card />}>
+          </Route>
+          <Route path='/ask' element={<Ask />}>
+          </Route>
+          <Route path='/note' element={<Note />}>
+          </Route>
+        </Routes>
+      </Router>
     </>
   );
 }

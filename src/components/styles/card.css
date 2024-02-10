@@ -74,12 +74,12 @@
 }
 
 .front-envelope {
-    position: relative;
+    position: absolute;
     border-right: 180px solid #8804db;
     border-top: 95px solid transparent;
     border-bottom: 102px solid transparent;
-    left: 72px;
-    top: 21px;
+    left: -15px;
+    top: -79px;
     width: 0;
     height: 0;
     z-index: 3;
