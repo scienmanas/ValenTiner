@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'BackStreet' ;
+    src: local('BackStreet') , url('./Fonts/Backstreet.ttf');
+}
+
+@font-face {
+    font-family: 'ShiftyNotes';
+    src: local('ShiftyNotes') , url('./Fonts/ShiftyNotesRegular-BWZ6d.ttf');
+}
+
+@font-face {
+    font-family: 'MouldyCheese';
+    src: local('MouldyChesse') , url('./Fonts/MouldyCheeseRegular-WyMWG.ttf');
+}
+
+.convey {
+    font-family: 'BackStreet','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.09rem;
+    font-weight: bolder;
+}
+
+.ask {
+    font-family: 'ShiftyNotes','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 0.05rem;
+    font-weight: bolder;
+}
+
+.button-text {
+    font-family: 'MouldyCheese','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
+    font-weight: bolder;
+}

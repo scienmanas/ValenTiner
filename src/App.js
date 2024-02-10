@@ -5,7 +5,6 @@ import Loading from './components/Loading';
 import FrontPage from './components/FrontPage';
 import Card from './components/Card';
 import Note from './components/Note';
-import MessageSend from './components/MessageSend';
 import Ask from './components/Ask';
 
 function App() {
@@ -29,7 +28,8 @@ function App() {
           <FrontPage />
         </div>} */}
     {/* < Card /> */}
-    <Note />
+    {/* <Note /> */}
+    <Ask />
     </>
   );
 }
