@@ -3,12 +3,15 @@ import { DatePicker } from "antd";
 import { TimePicker } from 'antd';
 import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
+import { Link , useNavigate} from 'react-router-dom';
 import './styles/message.css';
 
 export default function MessageSend() {
     const [date, setDate] = useState(new Date());
     const [time, setTime] = useState(null)
     const [isSent, setIsSent] = useState("Send");
+
+    const navigate2 = useNavigate();
 
     const handleOnChangeDate = (date, dateString) => {
         setDate(date);
@@ -25,6 +28,9 @@ export default function MessageSend() {
         event.preventDefault();
         setIsSent("Sent")
         document.querySelector('.button-send').classList.add('pointer-events-none')
+        setTimeout(() => {
+            navigate2('/endpage')
+        }, 3000)
     }
 
     return (
@@ -65,6 +71,7 @@ export default function MessageSend() {
                     </div>
                 </button>
             </div>
+            <Link to="/endpage" className="endpage-link hidden pointer-events-none select-none"></Link>
         </div>
     );
 }
