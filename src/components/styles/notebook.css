@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Custom';
+    src: local('Custom') , url('./Fonts/LoveDays-2v7Oe.ttf');
+}
+
+@font-face {
+    font-family: 'Author';
+    src: local('Author') , url('./Fonts/Backstreet.ttf');
+    font-weight: 1000;
+    
+}
+
+.custom-cover-text{
+    font-family: 'Custom','Courier New', Courier, monospace;
+    @apply text-4xl;
+}
+
+.custom-author-book-cover {
+    font-family: 'Author','Courier New', Courier, monospace;
+}
+
+.book{
+  position: relative;
+  border-radius: 10px;
+  width: 210px;
+  height: 300px;
+  background-image: url(https://shorturl.at/euzMR);
+  background-size: cover;
+  background-position: center;
+  background-size: 97%;
+  -webkit-box-shadow: 1px 1px 12px black;
+  box-shadow: 1px 1px 12px black;
+  -webkit-transform: preserve-3d;
+  -ms-transform: preserve-3d;
+  transform: preserve-3d;
+  -webkit-perspective: 2000px;
+  perspective: 2000px;
+}
+
+.cover{
+  top: 0;
+  position: absolute;
+  background-color: lightgray;
+  background-image: linear-gradient( 40deg,rgb(218, 1, 203) , black);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform-origin: 0;
+  -ms-transform-origin: 0;
+  transform-origin: 0;
+  -webkit-box-shadow: 1px 1px 12px black;
+  box-shadow: 1px 1px 12px black; }
+
+.book:hover .cover{
+ -webkit-transition: all 0.5s;
+ transition: all 0.5s;
+ -webkit-transform: rotatey(-85deg);
+ -ms-transform: rotateY(-85deg);
+ transform: rotatey(-95deg);
+}

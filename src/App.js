@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import LoadingBar from 'react-top-loading-bar';
 import Loading from './components/Loading';
 import FrontPage from './components/FrontPage';
-import Note from './components/Note';
+import EndPage from './components/EndPage';
 import Ask from './components/Ask';
 import Envelope from './components/Envelope'; 
 import Destroy from './components/Destroy';
@@ -47,7 +47,7 @@ function App() {
           </Route>
           <Route path='/ask' element={<Ask setProgress={setProgress} />}>
           </Route>
-          <Route path='/note' element={<Note setProgress={setProgress} />}>
+          <Route path='/endpage' element={<EndPage setProgress={setProgress} />}>
           </Route>
           <Route path='/destroy' element={<Destroy setProgress={setProgress} />}>
           </Route>

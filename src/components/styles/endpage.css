@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family:'MouldyChesse';
+    src: local('MouldyChesse') , url('./Fonts/ShiftyNotesRegular-BWZ6d.ttf');
+}
+
+.button-chat-font{
+    font-family: 'MouldyChesse';
+}
+
+.video-animation {
+    animation: video-animate 2s infinite ease-in-out ;
+}
+
+@keyframes video-animate {
+    0% {
+        transform: scale(1);
+        rotate: -6deg;
+    }
+    50% {
+        transform: scale(1.05);
+        rotate: -5deg;
+    }
+    100% {
+        transform: scale(1);
+        rotate: -6deg;
+    }
+    
+}
