@@ -15,7 +15,12 @@ A Website to propose to your crush on valentine's day . It is a simple and beaut
 - Edit the message contents.
 - Replace the images with your own
 - Replace the text with your own
-- Host the website on [GitHub Pages](https://pages.github.com/) or on [Vercel](https://vercel.com/)
+- Host the website on [Vercel](https://vercel.com/)
+- Siginup on [Email.js](https://www.emailjs.com/) and get your `PUBLIC_KEY` and `SERVICE_ID` and `TEMPLATE_ID` from there. Put them in `.env`.
+- `env varibeles`: 
+    - `REACT_APP_API_EMAIL_JS_templateId`
+    - `REACT_APP_API_EMAIL_JS_serviceId`
+    - `REACT_APP_API_EMAIL_JS_publicKey`
 - Share the link with your crush
 **Note:** The website is responsive, so it will look good on both desktop and
 mobile.
