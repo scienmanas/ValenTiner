@@ -1,12 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState , useRef } from 'react';
 import { DatePicker } from "antd";
 import { TimePicker } from 'antd';
 import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 import { Link , useNavigate } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
 import './styles/message.css';
 
 export default function MessageSend() {
+
+    const templateId = process.env.REACT_APP_API_EMAIL_JS_templateId;
+    const serviceId = process.env.REACT_APP_API_EMAIL_JS_serviceId;
+    const publicKey = process.env.REACT_APP_API_EMAIL_JS_publicKey;
+
     const [date, setDate] = useState(new Date());
     const [time, setTime] = useState(null)
     const [isSent, setIsSent] = useState("Send");
@@ -28,6 +34,27 @@ export default function MessageSend() {
         event.preventDefault();
         setIsSent("Sent")
         document.querySelector('.button-send').classList.add('pointer-events-none')
+
+        // Emailing
+
+        const templateParams = {
+            message: document.querySelector('.area-text').value,
+            date: dayjs(date).format('DD/MM/YYYY'),
+            time: time
+        }
+
+        emailjs.send
+        (serviceId, templateId, templateParams, publicKey)
+        .then((response)=> {
+        })
+        .catch((error) => {
+            console.log(error);
+        })
+
+        setDate(new Date());
+        setTime(null);
+        document.querySelector('.area-text').value = '';
+
         setTimeout(() => {
             navigate2('/endpage')
         }, 3000)

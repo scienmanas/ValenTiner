@@ -161,7 +161,7 @@ export default function Ask(props) {
             className="ask text-2xl text-center sm:text-4xl select-none">
             {askText} <span>{emojiAsk}</span>
           </div>
-          <div className="buttons flex flex-row flex-wrap gap-16 items-center justify-center">
+          <div className="buttons flex flex-row flex-wrap gap-16 mb-2 items-center justify-center">
             <button
               className='Yes w-fit h-fit'
               onClick={handleYesClick}
