@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Lottie from 'react-lottie';
+import { Link , useNavigate} from 'react-router-dom';
 import MessageSend from './MessageSend';
 import './styles/ask.css';
 import boyLookingToBeAcceptedFile from './assets/animations/boy-looking-to-accept.json';
@@ -56,10 +57,21 @@ const acceptAnimation = {
 
 export default function Ask() {
 
+  const navigate = useNavigate();
+
   const [noCount, setNoCount] = useState(0);
   const [askText, setAskText] = useState("Will you do me the honor of being my Valentine?");
   const [emojiAsk, setEmojiAsk] = useState('💗');
   const [yesOrNow, setYesOrNow] = useState(null);
+
+
+  useEffect(() => {
+    if (noCount > 2) { 
+      setTimeout(() => {
+        navigate('/destroy'); 
+      }, 1000); 
+    }
+  }, [noCount, navigate]);
 
   const handleNoClick = (event) => {
     event.preventDefault();
@@ -165,6 +177,7 @@ export default function Ask() {
           {yesOrNow === "Yes" ? <MessageSend /> : null}
         </div>
       </div>
+      <Link to="/destroy" className="destroy-link hidden pointer-events-none select-none"></Link>
     </div>
   )
 };

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Lottie from 'react-lottie';
+import { Link } from 'react-router-dom';
 import bg from './assets/images/page-1_bg.png';
 import heartAnimation from './assets/animations/floating_hearts.json';
 import './styles/frontpage.css';
@@ -74,7 +75,13 @@ export default function FrontPage() {
                 <div className="text px-8">
                     <p className='sm:text-5xl text-3xl typing-text text-transparent bg-clip-text bg-gradient-to-br from-[#ff9966] to-[#36d1dc] shadow-pink-800 select-none'>{text}</p>
                 </div>
-                <button id='message-button' class="hidden transition-all duration-200 button button-text shadow-[5px_5px_0px_0px_rgba(109,40,217)] active:translate-x-1 active:translate-y-1 active:shadow-none mt-4 lg:text-xl box-shado w-fit h-fit bg-gradient-to-r from-[#FFECD2] to-[#FCB69F] py-4 px-5 rounded-md"><div class="w-fit h-fit text-transparent bg-clip-text bg-gradient-to-r from-[#C33764] to-[#1D2671] font-bold"><span className='select-none'>See Message</span></div></button>
+
+                <Link to='/envelope'><button id='message-button' class="hidden transition-all duration-200 button button-text shadow-[5px_5px_0px_0px_rgba(109,40,217)] active:translate-x-1 active:translate-y-1 active:shadow-none mt-4 lg:text-xl box-shado w-fit h-fit bg-gradient-to-r from-[#FFECD2] to-[#FCB69F] py-4 px-5 rounded-md">
+                    <div class="w-fit h-fit text-transparent bg-clip-text bg-gradient-to-r from-[#C33764] to-[#1D2671] font-bold">
+                        <span className='select-none'>See Message</span>
+                    </div>
+                </button>
+                </Link>
             </div>
         </div>
     );

@@ -2,9 +2,10 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import Loading from './components/Loading';
 import FrontPage from './components/FrontPage';
-import Card from './components/Card';
 import Note from './components/Note';
 import Ask from './components/Ask';
+import Envelope from './components/Envelope'; 
+import Destroy from './components/Destroy';
 import {
   BrowserRouter as Router,
   Routes,
@@ -23,8 +24,6 @@ function App() {
   }, [])
 
 
-
-
   return (
     <>
       <Router>
@@ -34,9 +33,13 @@ function App() {
               <FrontPage />
             </div>} >
           </Route>
-          <Route path='/card' element={< Card />}>
+          <Route path='/envelope' element={< Envelope />}>
           </Route>
           <Route path='/ask' element={<Ask />}>
+          </Route>
+          <Route path='/note' element={<Note />}>
+          </Route>
+          <Route path='/destroy' element={<Destroy />}>
           </Route>
           <Route path='/note' element={<Note />}>
           </Route>

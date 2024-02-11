@@ -1,7 +1,8 @@
 import React from 'react'
 import Lottie from 'react-lottie'
 import { useState } from 'react'
-import './styles/card.css'
+import { Link } from 'react-router-dom'
+import './styles/envelope.css'
 import boyThinkAnimationFile from './assets/animations/boy-thinking.json'
 import boyJumpingAnimatinFile from './assets/animations/boy-jumping.json'
 import YayAnimationFile from './assets/animations/yay.json'
@@ -70,27 +71,18 @@ export default function Card() {
           </div>
           <div
             className="button-2 w-fit h-fit hidden">
-            <button
-              // onClick={handleOpenEnvelope}
-              // disabled={``}
-              className='relative rounded-lg py-2 px-3 shadow-[4px_4px_0px_0px_rgba(109,40,217)] bg-transparent bg-gradient-to-tr from-[#cc2b5e] to-[#ffc3a0] active:shadow-none active:translate-x-1 active:translate-y-1 duration-75'
-            >
-              <div
-                className="z-0 text-button text-center text-base font-bold text-transparent bg-clip-text bg-gradient-to-br from-[#eecda3] to-[#a8e063] select-none">
-                A Message
-                {/* <span className='text-red-700'> &#x1F498;</span> */}
-              </div>
-            </button>
+            <Link to='/ask'>
+              <button
+                className='relative rounded-lg py-2 px-3 shadow-[4px_4px_0px_0px_rgba(109,40,217)] bg-transparent bg-gradient-to-tr from-[#cc2b5e] to-[#ffc3a0] active:shadow-none active:translate-x-1 active:translate-y-1 duration-75'
+              >
+                <div
+                  className="z-0 text-button text-center text-base font-bold text-transparent bg-clip-text bg-gradient-to-br from-[#eecda3] to-[#a8e063] select-none">
+                  A Message
+                </div>
+              </button>
+            </Link>
           </div>
         </div>
-        {/* <div
-          className="hearts">
-          <div className="one"></div>
-          <div className="two"></div>
-          <div className="three"></div>
-          <div className="four"></div>
-          <div className="five"></div>
-        </div> */}
         <div
           className="z-3 shadow absolute w-[330px] h-14 bg-slate-400 translate-y-44 rounded-[50%]"></div>
       </div>
