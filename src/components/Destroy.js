@@ -21,7 +21,14 @@ const bombAnimation = {
     }
 };
 
-export default function Destroy() {
+export default function Destroy(props) {
+
+useEffect(() => {
+  props.setProgress(100);
+}, [])
+
+
+
     useEffect(() => {
         const disableScroll = () => {
             // Disable touchmove event

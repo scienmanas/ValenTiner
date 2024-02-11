@@ -1,5 +1,6 @@
 import './App.css';
 import { useState, useEffect } from 'react';
+import LoadingBar from 'react-top-loading-bar';
 import Loading from './components/Loading';
 import FrontPage from './components/FrontPage';
 import Note from './components/Note';
@@ -15,6 +16,7 @@ import {
 function App() {
 
   const [loading, setLoading] = useState(true);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
 
@@ -24,24 +26,30 @@ function App() {
   }, [])
 
 
+
   return (
     <>
       <Router>
+      <LoadingBar
+        color='#ff00ff'
+        progress={progress}
+        height={4}
+        onLoaderFinished={() => setProgress(0)
+        }
+      />
         <Routes>
           <Route path='/' element={loading === true ? <Loading /> :
             <div id='valentizer' className={`valentizer`}>
               <FrontPage />
             </div>} >
           </Route>
-          <Route path='/envelope' element={< Envelope />}>
+          <Route path='/envelope' element={< Envelope setProgress={setProgress} />}>
           </Route>
-          <Route path='/ask' element={<Ask />}>
+          <Route path='/ask' element={<Ask setProgress={setProgress} />}>
           </Route>
-          <Route path='/note' element={<Note />}>
+          <Route path='/note' element={<Note setProgress={setProgress} />}>
           </Route>
-          <Route path='/destroy' element={<Destroy />}>
-          </Route>
-          <Route path='/note' element={<Note />}>
+          <Route path='/destroy' element={<Destroy setProgress={setProgress} />}>
           </Route>
         </Routes>
       </Router>

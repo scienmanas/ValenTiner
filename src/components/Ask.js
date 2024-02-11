@@ -55,7 +55,7 @@ const acceptAnimation = {
 };
 
 
-export default function Ask() {
+export default function Ask(props) {
 
   const navigate = useNavigate();
 
@@ -72,6 +72,11 @@ export default function Ask() {
       }, 1000); 
     }
   }, [noCount, navigate]);
+
+  useEffect(() => {
+    props.setProgress(100);
+  }, [])
+  
 
   const handleNoClick = (event) => {
     event.preventDefault();

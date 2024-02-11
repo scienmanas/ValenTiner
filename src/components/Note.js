@@ -1,9 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { useEffect } from 'react'
 
-export default class Note extends Component {
-  render() {
-    return (
-      <div>Note</div>
-    )
-  }
+export default function Note(props) {
+
+
+  useEffect(() => {
+    props.setProgress(100);
+  }, [])
+  
+
+  return (
+    <div>Note</div>
+  )
 }
