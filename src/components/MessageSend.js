@@ -3,7 +3,7 @@ import { DatePicker } from "antd";
 import { TimePicker } from 'antd';
 import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
-import { Link , useNavigate} from 'react-router-dom';
+import { Link , useNavigate } from 'react-router-dom';
 import './styles/message.css';
 
 export default function MessageSend() {
