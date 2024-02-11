@@ -108,6 +108,8 @@ export default function Ask(props) {
   const handleYesClick = (event) => {
     event.preventDefault();
     document.querySelector('.wait-animation').classList.add('hidden');
+    document.querySelector('.cry-animation-1').classList.add('hidden');
+    document.querySelector('.cry-animation-2').classList.add('hidden');
     document.querySelector('.accept-animation').classList.remove('hidden');
     document.querySelector('.buttons').classList.add('hidden');
     setAskText("Yayy.. lets meet ! ")
