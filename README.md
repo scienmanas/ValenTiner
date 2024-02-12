@@ -2,7 +2,7 @@
 
 # ValenTiner
 
-A Website to propose to your crush on valentine's day . It is a simple and beautiful website to propose to your crush on valentine's day. It is responsive and customizable. You can host the website on [GitHub Pages](https://pages.github.com/) or on [Vercel](https://vercel.com/).
+A Website to propose to your crush on valentine's day . It is a simple and beautiful website to propose to your crush on valentine's day. It is responsive and customizable. You can host/deploy the website on [Vercel](https://vercel.com/).
 
 ## Features
 - [x] Responsive
@@ -21,8 +21,13 @@ A Website to propose to your crush on valentine's day . It is a simple and beaut
     - `REACT_APP_API_EMAIL_JS_templateId`
     - `REACT_APP_API_EMAIL_JS_serviceId`
     - `REACT_APP_API_EMAIL_JS_publicKey`
-- Share the link with your crush
-**Note:** The website is responsive, so it will look good on both desktop and
+- variables to be in email template (on email.js website) :
+    - `date`
+    -  `time`
+    -  `message`
+- Share the deployed link with your crush.
+ 
+- **Note:** The website is responsive, so it will look good on both desktop and
 mobile.
 
 ## License
@@ -43,6 +48,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Support
 
 If you like this project, give it a ⭐
+
+## Credits
+
+- [LottieFiles](https://lottiefiles.com/): For provinding cool free lottie animation.
+- [Email.js](https://www.emailjs.com/) : Handling the form and mailing the message.
 
 ## Feedback
 
