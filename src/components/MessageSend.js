@@ -1,9 +1,9 @@
-import React, { useState , useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { DatePicker } from "antd";
 import { TimePicker } from 'antd';
 import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
-import { Link , useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import './styles/message.css';
 
@@ -16,44 +16,48 @@ export default function MessageSend() {
     const [date, setDate] = useState(new Date());
     const [time, setTime] = useState(null)
     const [isSent, setIsSent] = useState("Send");
+    const [messageInput, setMessageInput] = useState("");
+    const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
     const navigate2 = useNavigate();
 
     const handleOnChangeDate = (date, dateString) => {
-        setDate(date);
+        setDate(dateString);
     }
 
     dayjs.extend(customParseFormat);
 
     const handleOnChangeTime = (time, timeString) => {
-        // console.log(time, timeString);
         setTime(timeString);
     };
 
+    useEffect(() => {
+        setIsButtonDisabled(!(messageInput !== '' && date && time));
+    }, [date, time, messageInput]);
+
     const handleSubmitMessage = (event) => {
         event.preventDefault();
-        setIsSent("Sent")
-        document.querySelector('.button-send').classList.add('pointer-events-none')
+        setIsSent("Sent");
+        setIsButtonDisabled(true);
 
         // Emailing
 
         const templateParams = {
-            message: document.querySelector('.area-text').value,
+            message: messageInput,
             date: dayjs(date).format('DD/MM/YYYY'),
             time: time
         }
 
-        emailjs.send
-        (serviceId, templateId, templateParams, publicKey)
-        .then((response)=> {
-        })
-        .catch((error) => {
-            console.log(error);
-        })
+        emailjs.send(serviceId, templateId, templateParams, publicKey)
+            .then((response) => {
+            })
+            .catch((error) => {
+                console.log(error);
+            })
 
         setDate(new Date());
         setTime(null);
-        document.querySelector('.area-text').value = '';
+        setMessageInput('');
 
         setTimeout(() => {
             navigate2('/endpage')
@@ -69,13 +73,14 @@ export default function MessageSend() {
                         className='w-36 sm:w-48 lg:w-56 h-10 sm:h-12 lg:h-14'
                     />
                 </div>
-                <div className="time w-fit h-fite">
+                <div className="time w-fit h-fit">
                     <TimePicker
                         changeOnScroll
                         needConfirm={false}
                         onChange={handleOnChangeTime}
                         defaultOpenValue={dayjs('00:00:00', 'HH:mm:ss')}
                         className='w-36 sm:w-48 lg:w-56 h-10 sm:h-12 lg:h-14'
+                        value={time ? dayjs(time, 'HH:mm:ss') : null}
                     />
                 </div>
             </div>
@@ -85,15 +90,18 @@ export default function MessageSend() {
                     name=""
                     id=""
                     placeholder='Message here...'
+                    onChange={(e) => setMessageInput(e.target.value)}
+                    value={messageInput}
                 />
             </div>
             <div className="button-send">
                 <button
-                    className='send-button w-fit h-fit'
+                    className={`send-button w-fit h-fit ${isButtonDisabled ? 'opacity-30' : ''}`}
+                    disabled={isButtonDisabled}
                     onClick={handleSubmitMessage}
                 >
                     <div
-                        className="button-text px-7 py-3 border-2 rounded-xl text-xl bg-transparent bg-gradient-to-tr from-[#3a6186] to-[#89253e] text-gray-200 shadow-xl shadow-pink-500 hover:scale-110 active:scale-90 duration-100 mb-8 sm:mb-4 rotate-6">
+                        className={`button-text px-7 py-3 border-2 rounded-xl text-xl bg-transparent bg-gradient-to-tr from-[#3a6186] to-[#89253e] text-gray-200 shadow-xl shadow-pink-500 ${isButtonDisabled ? '' : 'hover:scale-110 active:scale-90'} duration-100 mb-8 sm:mb-4 rotate-6`}>
                         {isSent}
                     </div>
                 </button>
