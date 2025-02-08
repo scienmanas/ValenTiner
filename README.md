@@ -54,6 +54,6 @@ If you like this project, give it a ⭐
 - [LottieFiles](https://lottiefiles.com/): For provinding cool free lottie animation.
 - [Email.js](https://www.emailjs.com/) : Handling the form and mailing the message.
 
-## Feedback
+## Feedbackth
 
 If you have any feedback, please reach out to us at **iamscientistmanas@gmail.com**
