@@ -59,3 +59,8 @@ If you like this project, give it a ⭐
 If you have any feedback, please reach out to us at **iamscientistmanas@gmail.com**
 
 <!-- GitAds-Verify: CIVJ9NBA1VEN7C7G24V8AVBOLZM9F3E9 -->
+
+
+## GitAds Sponsored
+[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=scienmanas/valentiner@github)](https://gitads.dev/v1/ad-track?source=scienmanas/valentiner@github)
+
