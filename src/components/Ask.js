@@ -60,7 +60,7 @@ export default function Ask(props) {
   const navigate = useNavigate();
 
   const [noCount, setNoCount] = useState(0);
-  const [askText, setAskText] = useState("Will you do me the honor of being my Valentine?");
+  const [askText, setAskText] = useState("Will you do me the honor of being my forever?");
   const [emojiAsk, setEmojiAsk] = useState('💗');
   const [yesOrNow, setYesOrNow] = useState(null);
 
@@ -89,7 +89,7 @@ export default function Ask(props) {
     } else if (noCount === 1) {
       document.querySelector('.cry-animation-1').classList.add('hidden');
       document.querySelector('.cry-animation-2').classList.remove('hidden');
-      setAskText("Please be my Valentine?")
+      setAskText("Please be my life partner?")
       setEmojiAsk('😭')
     }
     else {

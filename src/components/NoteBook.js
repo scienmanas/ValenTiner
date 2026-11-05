@@ -12,7 +12,7 @@ export default function NoteBook() {
                                 Happy Valentines Day <span className='text-red-700'>💕</span>
                             </div>
                             <div className='w-fit h-fit text-end text-3xl select-none custom-author-book-cover text-transparent bg-clip-text bg-gradient-to-tr from-[#1d2671] to-[#ffedbc]'>
-                                ~ Manas
+                                ~ Aditya
                             </div>
                         </div>
                         <div className="smile"></div>
